@@ -13,20 +13,14 @@ export default function Routes() {
     <Drawer.Navigator
     drawerContent={CustonDrawer}
     screenOptions={{
-        drawerActiveBackgroundColor:'#00dae5',
-        drawerInactiveBackgroundColor:'#fafaf2',
-        drawerInactiveTintColor:'red',
+        drawerInactiveTintColor:'gray',
         drawerActiveTintColor:'#00ff',
-        drawerStyle:{
-            backgroundColor:'#00ff',
-            width:240
-        }
     }}
     >
+        <Drawer.Screen name='Login' component={Login}/>
         <Drawer.Screen name='Home' component={Home}/>
         <Drawer.Screen name='Ajuda' component={Ajuda}/>
         <Drawer.Screen name='Sobre' component={Sobre}/>
-        <Drawer.Screen name='Login' component={Login}/>
     </Drawer.Navigator>
   )
 }

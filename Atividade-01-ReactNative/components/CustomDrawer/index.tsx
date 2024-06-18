@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React, {} from 'react'
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer'
-import { logado } from '../../screens/Login';
+
 
 export default function CustonDrawer(props) {
   return (
@@ -14,10 +14,9 @@ export default function CustonDrawer(props) {
             justifyContent:"center"
         }}
         >
-        <Text style={{ fontSize: 18, marginTop: 5, color: "#000" }}>
-          {/* {logado} */}
-          Bem vindo !
-        </Text>
+        {/* <Text style={{ fontSize: 18, marginTop: 5, color: "#000" }}>
+          {logado}
+        </Text>  */}
         </View>
         <DrawerItemList {...props}/>
     </DrawerContentScrollView>

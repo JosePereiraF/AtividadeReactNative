@@ -1,25 +1,26 @@
-import { View, Text,StyleSheet,Image, Button } from 'react-native'
+import { View, Text,StyleSheet,Image, Button, ImageSourcePropType } from 'react-native'
 import React from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import Sobre from '../../screens/Sobre';
 
 interface CardAjudaProps{
-    imagem:string,
+    imagem:ImageSourcePropType,
     texto:string
   }
 export default function CardAjuda({imagem,texto}:CardAjudaProps) {
-  const Stack = createNativeStackNavigator();
-
+  const navigation = useNavigation();
+ function trocarTela(local:string){
+  local =="Sobre nós"?navigation.jumpTo("Sobre"):""
+ }
  return (
     <View style={styles.container}>
       <Image 
-      source={imagem=="imagem1"?require("../../assets/sobreNós.png"):imagem=="imagem2"?require("../../assets/IconeFaleConnosco.png"):imagem=="imagem3"?require("../../assets/IconeChatBot.png"):require("../../assets/IconeAvaliação.png")}
+      source={imagem}
       style={{ width: 120, height: 100 }}
       />
-        {/* <Button title={texto}  /> */}
-      <TouchableOpacity style={styles.button} >
+      <TouchableOpacity style={styles.button} onPress={()=>trocarTela(texto)} >
         <Text>
           {texto}
         </Text>

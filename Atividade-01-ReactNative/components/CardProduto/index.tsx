@@ -1,8 +1,8 @@
-import { View, Text,Image,StyleSheet, Button } from 'react-native'
+import { View, Text,Image,StyleSheet, Button, ImageSourcePropType } from 'react-native'
 import React from 'react'
 
 interface CardProdutoProps{
-  imagem:string,
+  imagem:ImageSourcePropType,
   valor:number,
   nome:string
 }
@@ -12,7 +12,7 @@ export default function CardProduto({imagem,valor,nome}:CardProdutoProps ) {
   return (
     <View style={styles.container}>
       <Image 
-      source={imagem=="imagem1"?require("../../assets/image-removebg-preview.png"):imagem=="imagem2"?require("../../assets/image-removebg-preview (1).png"):imagem=="imagem3"?require("../../assets/image-removebg-preview (2).png"):require("../../assets/image-removebg-preview (3).png")}
+      source={imagem}
       style={{ width: 65, height: 85 }}
       />
         <Text>

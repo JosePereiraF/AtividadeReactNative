@@ -2,19 +2,23 @@ import { View, Text,StyleSheet } from 'react-native'
 import React, { useState } from 'react'
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import CardAjuda from '../../components/CardAjuda';
-
+import ImageAvaliacao from '../../assets/IconeAvaliação.png'
+import imageSobre from '../../assets/sobreNós.png'
+import imageSac from '../../assets/IconeFaleConnosco.png'
+import imageBot from '../../assets/IconeChatBot.png'
 export default function Ajuda() {
   const[cards,setCards] = useState([
-    { id:1, texto: "Sobre nós", image:"imagem1" },
-    { id:2, texto: "Fale Connosco", image:"imagem2" },
-    { id:3, texto: "Chat Bot",image:"imagem3" },
-    { id:4, texto: "Avaliação",image:"imagem4" },
+    { id:1, texto: "Sobre nós", image:imageSobre },
+    { id:2, texto: "Fale Connosco", image:imageSac },
+    { id:3, texto: "Chat Bot",image:imageBot },
+    { id:4, texto: "Avaliação",image:ImageAvaliacao },
     
     ]);
   return (
     <ScrollView>
     <View style={styles.container}>
         <FlatList
+        scrollEnabled={false}
         contentContainerStyle={styles.card}
         data={cards}
         keyExtractor={(item) => item.id.toString()}

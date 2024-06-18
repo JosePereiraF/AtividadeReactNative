@@ -1,5 +1,6 @@
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function Login() {
@@ -7,15 +8,16 @@ export default function Login() {
   const [senha, setSenha] = useState('');
   const emailCerto = "jonas@gmail.com";
   const senhaCerta = "123";
-  const [logado, setLogado] = useState('');
-
+  const navigation = useNavigation();
 
   const login = () => {
     if (email === '' || senha === '') {
       Alert.alert('Erro', 'Por favor, preencha todos os campos.');
       return;
-    } else if (email === emailCerto && senha === senhaCerta){
-      setLogado('Jonas');
+    } else if (email === emailCerto && senha === senhaCerta){ 
+      setEmail("");
+      setSenha("");
+      navigation.jumpTo("Home");  
       Alert.alert('Bem vindo');
       return;
     }else{

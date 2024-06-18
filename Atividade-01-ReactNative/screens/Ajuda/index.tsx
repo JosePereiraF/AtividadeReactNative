@@ -1,11 +1,13 @@
 import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
 
-export default function Login() {
+export default function Ajuda() {
 
   return (
     <View>
-      <Text>Login</Text>
+        <Text>
+            Pagina
+        </Text>
     </View>
   )
 }

@@ -1,4 +1,4 @@
-import { View, Text,Image,StyleSheet } from 'react-native'
+import { View, Text,Image,StyleSheet, Button } from 'react-native'
 import React from 'react'
 
 interface CardProdutoProps{
@@ -27,7 +27,7 @@ export default function CardProduto({imagem,valor,nome}:CardProdutoProps ) {
 const styles = StyleSheet.create({
   container: {
     height: 150,
-    width: 100,
+    width: 150,
     backgroundColor: 'lightgray',
     alignItems: 'center',
     justifyContent: 'center',

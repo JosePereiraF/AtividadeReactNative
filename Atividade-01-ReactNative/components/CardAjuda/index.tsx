@@ -11,13 +11,7 @@ interface CardAjudaProps{
   }
 export default function CardAjuda({imagem,texto}:CardAjudaProps) {
   const Stack = createNativeStackNavigator();
-function trocarTela(){
-  <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen name='Sobre' component={Sobre}/>
-    </Stack.Navigator>
-  </NavigationContainer>
-}
+
  return (
     <View style={styles.container}>
       <Image 
@@ -25,7 +19,7 @@ function trocarTela(){
       style={{ width: 120, height: 100 }}
       />
         {/* <Button title={texto}  /> */}
-      <TouchableOpacity style={styles.button} onPress={trocarTela}>
+      <TouchableOpacity style={styles.button} >
         <Text>
           {texto}
         </Text>

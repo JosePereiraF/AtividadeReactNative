@@ -6,7 +6,7 @@ export default function Sobre() {
 
   return (
     <View>
-      <Text>Sobre</Text>
+      <Text> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, quam. Harum sed porro sint similique voluptas autem expedita aliquam! Ipsa eius odit, fugiat voluptates sed deleniti accusamus! Vitae, numquam neque!</Text>
     </View>
   )
 }

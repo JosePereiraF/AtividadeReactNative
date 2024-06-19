@@ -1,6 +1,7 @@
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 export default function Login() {
@@ -45,7 +46,9 @@ export default function Login() {
         secureTextEntry
         autoCapitalize="none"
       />
-      <Button title="Login" onPress={login} />
+     <TouchableOpacity style={styles.button} onPress={login}>
+        <Text style={styles.buttonText}>Login</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -70,5 +73,17 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     paddingHorizontal: 8,
     width: '100%',
+  },
+  button: {
+    backgroundColor: 'black',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
   },
 });

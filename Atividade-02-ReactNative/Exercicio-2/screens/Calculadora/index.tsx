@@ -19,7 +19,7 @@ export default function Calculadora() {
             <Text style={styles.title}>Qual a melhor opção?</Text>
             <TextInput value={gasolina.toString()}/>
             <TextInput value={alcool.toString()}/>
-
+            
         <TouchableOpacity style={styles.buttton} >
             <Text>Calcular</Text>
         </TouchableOpacity>
